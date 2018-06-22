@@ -1,0 +1,7 @@
+{% if app_name is defined %}
+app={{ app_name }}
+{% endif %}
+{% if app_env is defined %}
+app_env={{ app_env }}
+{% endif %}
+port = {{ app_ports[app_name][app_env].http_port }}

@@ -1,0 +1,5 @@
+- hosts: all
+  become: yes
+  roles:
+    - { role: ag_set_global_vars, tags: ['setvars'] }
+    - { role: ag_app_config, tags: ['appconfig'] }

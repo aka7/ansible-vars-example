@@ -1,0 +1,9 @@
+---
+# tasks file for ag_app_config
+- name: configure app
+  template:
+    src: app.j2
+    dest: /tmp/app.conf
+    owner: "{{ app_user }}"
+    group: "{{ app_owner }}"
+    mode: "0600"
